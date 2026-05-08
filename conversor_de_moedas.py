@@ -1,0 +1,6 @@
+print("|Conversor de Moedas|")
+print("|Qual moeda você quer converter?|")
+print("|1 - Real(R$)|")
+print("|2 - Dolár($)|")
+print("|3 - Euro(R$)|")
+print("|4 - Real(R$)|")
