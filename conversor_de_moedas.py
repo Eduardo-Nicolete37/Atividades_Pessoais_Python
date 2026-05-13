@@ -78,4 +78,4 @@ valor_moeda_final = count * valor_moeda
 os.system('cls')
 
 print(f"A conversão do(a) {first} para o(a) {last} é: {final}{valor_moeda:.2f}")
-print(f"Multiplicado pelo {count}, é igual á: {final}{valor_moeda_final}")
+print(f"Multiplicado pelo {count}, é igual á: {final} {valor_moeda_final:.2f}")
