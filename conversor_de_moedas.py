@@ -17,15 +17,19 @@ os.system('cls')
 if  in_money == 1:
     puller = "BRL-"
     first = "Real"
+    starter = "R$"
 elif in_money == 2:
     puller = "USD-"
     first = "Dolár"
+    starter = "$"
 elif in_money == 3:
     puller = "EUR-"
     first = "Euro"
+    starter = "€"
 elif in_money == 4:
     puller = "GBP-"
     first = "Libra"
+    starter = "£"
 else:
     print("MOEDA FORA DA LISTA! TENTE NOVAMENTE")
     sys.exit()
@@ -78,4 +82,4 @@ valor_moeda_final = count * valor_moeda
 os.system('cls')
 
 print(f"A conversão do(a) {first} para o(a) {last} é: {final}{valor_moeda:.2f}")
-print(f"Multiplicado pelo {count}, é igual á: {final} {valor_moeda_final:.2f}")
+print(f"Multiplicado por {starter}{count}, é igual á: {final} {valor_moeda_final:.2f}")
