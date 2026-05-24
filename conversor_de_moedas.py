@@ -5,7 +5,7 @@ os.system('cls')
 puller = ""
 
 
-print("|         Conversor de Moedas          |")
+print("|---------Conversor de Moedas----------|")
 print("| De qual moeda você deseja converter? |")
 print("| 1 - Real(R$)                         |")
 print("| 2 - Dolár($)                         |")
