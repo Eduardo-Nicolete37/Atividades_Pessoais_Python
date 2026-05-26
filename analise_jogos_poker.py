@@ -2,6 +2,7 @@ from texasholdem import Card
 from texasholdem.evaluator import evaluate, rank_to_string
 import os
 
+os.system('cls')
 def avaliar_pre_flop(hole_cards, cartas_user):
     card1 = max(hole_cards[0].rank, hole_cards[1].rank)
     card2 = min(hole_cards[0].rank, hole_cards[1].rank)
@@ -22,9 +23,9 @@ def avaliar_pre_flop(hole_cards, cartas_user):
     if card1 < 5:
         score -=3
     if pair:
-        percentual = round((score/39) * 100)
+        percentual = min(round((score/39) * 100), 100)
     if not pair:
-        percentual = round((score/28) * 100)
+        percentual = min(round((score/28) * 100), 100)
 
 
 
@@ -66,6 +67,131 @@ def avaliar_pre_flop(hole_cards, cartas_user):
         print("É uma mão péssima")
         print(f"Equidade estimada: {percentual}%")
 
+def avaliar_flop(hole_cards, cartas_user):
+    os.system('cls')
+    while True:
+        mesa_cards = input("Na mesma notação, escreva as 3 cartas comunitárias: ").split()
+        try:
+            table_cards = [Card(c) for c in mesa_cards]
+            if len(table_cards) == 3:
+                break
+            else:
+                print("Digite exatamente 3 cartas, tente novamente.")
+        except:
+            print("Mesa inválida! Tente novamente.")
+    rank = evaluate(cards=hole_cards, board=table_cards)
+    evaluation = round((1 - rank / 7462) * 100, 2)
+    
+    if rank <= 300:
+        os.system('cls')
+        print(f"{' '.join(cartas_user)} num flop como esse é uma mão fortissima!")
+        print(f"Seu percentual de força estimado é {evaluation}%")
+        print("Recomendo um BET agressivo, mas cuidado para não assustar outros players")
+    elif rank <= 1000:
+        os.system('cls')
+        print(f"{' '.join(cartas_user)} num flop como esse é uma mão forte!")
+        print(f"Seu percentual de força estimado é {evaluation}%")
+        print("Recomendo um BET moderado, mas cuidado, pode ter alguém com mão melhor")
+    elif rank <= 2500:
+        os.system('cls')
+        print(f"{' '.join(cartas_user)} num flop como esse é uma mão mediana!")
+        print(f"Seu percentual de força estimado é {evaluation}%")
+        print("Recomendo fazer o CALL ou um BET baixo, mas cuidado, não pague bets muito caras.")
+    elif rank <= 4500:
+        os.system('cls')
+        print(f"{' '.join(cartas_user)} num flop como esse é uma mão relativamente fraca!")
+        print(f"Seu percentual de força estimado é {evaluation}%")
+        print("Recomendo fazer o CHECK ou um CALL baixo, mas cuidado, provavelmente tem alguém melhor.")
+    else:
+        os.system('cls')
+        print(f"{' '.join(cartas_user)} num flop como esse é uma mão pessima!")
+        print(f"Seu percentual de força estimado é {evaluation}%")
+        print("Recomendo fazer o FOLD na maioria das situações, a não ser que sejam cartas muito altas.")
+
+def avaliar_turn(hole_cards, cartas_user):
+    os.system('cls')
+    while True:
+        mesa_cards = input("Na mesma notação, escreva as 4 cartas comunitárias: ").split()
+        try:
+            table_cards = [Card(c) for c in mesa_cards]
+            if len(table_cards) == 4:
+                break
+            else:
+                print("Digite exatamente 4 cartas, tente novamente.")
+        except:
+            print("Mesa inválida! Tente novamente.")
+
+    rank = evaluate(cards=hole_cards, board=table_cards)
+    evaluation = round((1 - rank / 7462) * 100, 2)
+    
+    if rank <= 300:
+        os.system('cls')
+        print(f"{' '.join(cartas_user)} num turn como esse é uma mão fortissima!")
+        print(f"Seu percentual de força estimado é {evaluation}%")
+        print("Recomendo um BET agressivo, mas cuidado para não assustar outros players")
+    elif rank <= 1000:
+        os.system('cls')
+        print(f"{' '.join(cartas_user)} num turn como esse é uma mão forte!")
+        print(f"Seu percentual de força estimado é {evaluation}%")
+        print("Recomendo um BET moderado, mas cuidado, pode ter alguém com mão melhor")
+    elif rank <= 2500:
+        os.system('cls')
+        print(f"{' '.join(cartas_user)} num turn como esse é uma mão mediana!")
+        print(f"Seu percentual de força estimado é {evaluation}%")
+        print("Recomendo fazer o CALL ou um BET baixo, mas cuidado, não pague bets muito caras.")
+    elif rank <= 4500:
+        os.system('cls')
+        print(f"{' '.join(cartas_user)} num turn como esse é uma mão relativamente fraca!")
+        print(f"Seu percentual de força estimado é {evaluation}%")
+        print("Recomendo fazer o CHECK ou um CALL baixo, mas cuidado, provavelmente tem alguém melhor.")
+    else:
+        os.system('cls')
+        print(f"{' '.join(cartas_user)} num turn como esse é uma mão pessima!")
+        print(f"Seu percentual de força estimado é {evaluation}%")
+        print("Recomendo fazer o FOLD na maioria das situações, a não ser que sejam cartas muito altas.")
+
+def avaliar_river(hole_cards, cartas_user):
+    os.system('cls')
+    while True:
+        mesa_cards = input("Na mesma notação, escreva as 5 cartas comunitárias: ").split()
+        try:
+            table_cards = [Card(c) for c in mesa_cards]
+            if len(table_cards) == 5:
+                break
+            else:
+                print("Digite exatamente 5 cartas, tente novamente.")
+        except:
+            print("Mesa inválida! Tente novamente.")
+
+    rank = evaluate(cards=hole_cards, board=table_cards)
+    evaluation = round((1 - rank / 7462) * 100, 2)
+    
+    if rank <= 300:
+        os.system('cls')
+        print(f"{' '.join(cartas_user)} num river como esse é uma mão fortissima!")
+        print(f"Seu percentual de força estimado é {evaluation}%")
+        print("Recomendo um BET agressivo — essa é sua mão final, extraia o máximo valor do pot!")
+    elif rank <= 1000:
+        os.system('cls')
+        print(f"{' '.join(cartas_user)} num river como esse é uma mão forte!")
+        print(f"Seu percentual de força estimado é {evaluation}%")
+        print("Recomendo um BET moderado — é sua última chance de ganhar valor, não deixe barato.")
+    elif rank <= 2500:
+        os.system('cls')
+        print(f"{' '.join(cartas_user)} num river como esse é uma mão mediana!")
+        print(f"Seu percentual de força estimado é {evaluation}%")
+        print("Recomendo CHECK — sem espaço para melhora, não arrisque fichas com mão mediocre.")
+    elif rank <= 4500:
+        os.system('cls')
+        print(f"{' '.join(cartas_user)} num river como esse é uma mão fraca!")
+        print(f"Seu percentual de força estimado é {evaluation}%")
+        print("Recomendo FOLD se houver qualquer bet — não há mais cartas para salvar sua mão.")
+    else:
+        os.system('cls')
+        print(f"{' '.join(cartas_user)} num river como esse é uma mão péssima!")
+        print(f"Seu percentual de força estimado é {evaluation}%")
+        print("Recomendo FOLD — só continue se puder fazer um bluff convincente.")
+
     
 os.system('cls')
 print("╔══════════════════════════════════════╗")
@@ -85,8 +211,13 @@ print("║   Exemplo: As Kh                     ║")
 print("║                                      ║")
 print("╚══════════════════════════════════════╝")
 
-cartas_user = input("Digite as suas cartas na notação descrita acima: ").split()
-hole_cards = [Card(c) for c in cartas_user]
+while True:
+    cartas_user = input("Digite as suas cartas na notação descrita acima: ").split()
+    try:
+        hole_cards = [Card(c) for c in cartas_user]
+        break
+    except:
+        print("Carta inválida! Tente novamente.")
 
 os.system('cls')
 fases = {"1": "PRE-FLOP", "2": "FLOP", "3": "TURN", "4": "RIVER"}
@@ -98,3 +229,9 @@ fase = fases.get(fase_key, "FLOP")
 
 if fase_key == "1":
     avaliar_pre_flop(hole_cards, cartas_user)
+elif fase_key == "2":
+    avaliar_flop(hole_cards, cartas_user)
+elif fase_key == "3":
+    avaliar_turn(hole_cards, cartas_user)
+elif fase_key == "4":
+    avaliar_river(hole_cards, cartas_user)
