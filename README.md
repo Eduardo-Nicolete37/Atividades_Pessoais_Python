@@ -40,7 +40,7 @@ Exemplo: As Kh (Ás de espadas + Rei de copas)
 ````
 
 <div align="center">
-  <img src="ignore/image.png" alt="Advisor de Poker" width="300"/>
+  <img src="https://github.com/user-attachments/assets/b863c612-c970-4cad-a48c-dbae26b2fbf1" alt="Advisor de Poker" width="300"/>
 
 </div>
 
@@ -75,7 +75,7 @@ Multiplicado por R$100, é igual á: $ 573.00
 ````
 
 <div align="center">
-  <img src="ignore/image-1.png" alt="Conversor de Moedas" width="300"/>
+  <img src="https://github.com/user-attachments/assets/f10beb33-1e25-4dbb-b1c4-fefc1ab1c0e7" alt="Conversor de Moedas" width="300"/>
 </div>
 
 ---
@@ -104,8 +104,7 @@ Um jogo de terminal onde o computador sorteia um número aleatório e o jogador 
 
 
 <div align="center">
-  <img src="ignore/image-2.png" alt="Demo do Jogo de Adivinhação" width="300"/>
-  <p><i>🖼️ Substitua pela imagem real do programa rodando</i></p>
+  <img src="https://github.com/user-attachments/assets/e9acd6ae-4f22-4b68-9e5c-5e2e8fc2648e" alt="Demo do Jogo de Adivinhação" width="300"/>
 </div>
 
 ---
