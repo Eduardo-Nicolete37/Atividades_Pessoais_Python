@@ -5,6 +5,7 @@ tent = int(1) # Seta o número de tentativas para 1
 
 
 # Menu de escolhas
+os.system('cls') # Limpa a tela para melhor visualização do menu
 print ("|-----------Jogo da Advinhação------------|")
 print ("| Por favor, escolha a dificuldade        |")
 print ("| 1: Fácil - Entre 1 e 10                 |")
