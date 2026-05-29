@@ -11,6 +11,13 @@ valor_face_cards = {
     "K": 10,
     "A": 11,
 }
+
+naipe = {
+    "h": "♥",
+    "c": "♣",
+    "s": "♠",
+    "d": "♦"
+}
 random.shuffle(baralho) # Embaralhamento das cartas
 
 def jogo_central(baralho):
