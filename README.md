@@ -3,7 +3,7 @@
   <h1>🐍 Atividades Pessoais — Python</h1>
 
   <p>
-    <img src="https://img.shields.io/badge/Python-3.13-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+    <img src="https://img.shields.io/badge/Python-3.14-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
     <img src="https://img.shields.io/badge/Status-Em%20desenvolvimento-yellow?style=for-the-badge" alt="Status"/>
     <img src="https://img.shields.io/badge/Projetos-3-brightgreen?style=for-the-badge" alt="Projetos"/>
   </p>
