@@ -18,6 +18,16 @@ naipe = {
     "s": "♠",
     "d": "♦"
 }
+def ace_value(valor_face_cards, sum_hand): # ARRUMAR TODA ESSA DEF
+    ace = valor_face_cards["A"] 
+    if sum_hand >= 21:
+        valor_face_cards["A"] = 1
+    else:
+        valor_face_cards["A"] = 11
+
+
+
+
 random.shuffle(baralho) # Embaralhamento das cartas
 
 def jogo_central(baralho):
