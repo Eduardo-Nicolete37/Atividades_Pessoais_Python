@@ -77,7 +77,7 @@ def main(hole_cards, cartas_user, fase_key):
                     break
                 else:
                     print("Digite exatamente 3 cartas, tente novamente.")
-            except:
+            except ValueError:
                 print("Mesa inválida! Tente novamente.")
         rank = evaluate(cards=hole_cards, board=table_cards)
         evaluation = round((1 - rank / 7462) * 100, 2)
@@ -123,7 +123,7 @@ def main(hole_cards, cartas_user, fase_key):
                     break
                 else:
                     print("Digite exatamente 4 cartas, tente novamente.")
-            except:
+            except ValueError:
                 print("Mesa inválida! Tente novamente.")
 
         rank = evaluate(cards=hole_cards, board=table_cards)
@@ -171,7 +171,7 @@ def main(hole_cards, cartas_user, fase_key):
                     break
                 else:
                     print("Digite exatamente 5 cartas, tente novamente.")
-            except:
+            except ValueError:
                 print("Mesa inválida! Tente novamente.")
 
         rank = evaluate(cards=hole_cards, board=table_cards)
@@ -233,7 +233,7 @@ while True:
     try:
         hole_cards = [Card(c) for c in cartas_user]
         break
-    except:
+    except ValueError:
         print("Carta inválida! Tente novamente.")
 
 os.system('cls')
