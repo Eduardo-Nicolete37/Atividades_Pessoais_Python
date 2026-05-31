@@ -3,17 +3,20 @@ import random # Importa biblioteca random para usar randint
 import sys
 tent = int(1) # Seta o número de tentativas para 1
 
-
 # Menu de escolhas
 os.system('cls') # Limpa a tela para melhor visualização do menu
-print ("|-----------Jogo da Advinhação------------|")
-print ("| Por favor, escolha a dificuldade        |")
-print ("| 1: Fácil - Entre 1 e 10                 |")
-print ("| 2: Médio - Entre 1 e 100                |")
-print ("| 3: Difícil - Entre 1 e 1000             |")
-print ("| 4: Personalizado - Você escolhe o 'teto'|")
-print ("| 5: Fechar o jogo                        |")
-print ()
+print("╔═════════════════════════════════════════╗")
+print("║           Jogo da Advinhação            ║")
+print("╠═════════════════════════════════════════╣")
+print("║                                         ║")
+print("║ Por favor, escolha a dificuldade        ║")
+print("║ 1: Fácil - Entre 1 e 10                 ║")
+print("║ 2: Médio - Entre 1 e 100                ║")
+print("║ 3: Difícil - Entre 1 e 1000             ║")
+print("║ 4: Personalizado - Você escolhe o 'teto'║")
+print("║ 5: Fechar o jogo                        ║")
+print("╚═════════════════════════════════════════╝")
+print()
 esc = int(input(" Qual será a dificuldade desejada: ")) # esc é a variavel que encaminha para a dificuldade escolhida
 os.system('cls') 
 
@@ -29,14 +32,8 @@ def guess_system(number, tent):
             print ("Incorreto! O número é MAIOR, tente novamente")
             answer = int(input("Nova tentativa: "))
             tent += 1
-    else:
-        print ("Parabéns! Você acertou em", tent, "tentativas")
-    return tent
+    print ("Parabéns! Você acertou em", tent, "tentativas")     
 
-
-        
-
-        
 # Encaminhadores para dificuldade
 if esc == 1:
     number = random.randint(1, 10)
