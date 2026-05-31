@@ -1,11 +1,11 @@
 <div align="center">
 
-  <h1>🐍 Atividades Pessoais — Python</h1>
+  <h1>Atividades Pessoais — Python</h1>
 
   <p>
     <img src="https://img.shields.io/badge/Python-3.14-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
     <img src="https://img.shields.io/badge/Status-Em%20desenvolvimento-yellow?style=for-the-badge" alt="Status"/>
-    <img src="https://img.shields.io/badge/Projetos-3-brightgreen?style=for-the-badge" alt="Projetos"/>
+    <img src="https://img.shields.io/badge/Projetos-4-brightgreen?style=for-the-badge" alt="Projetos"/>
   </p>
 
   <p>Repositório com projetos pessoais desenvolvidos em Python para estudo e prática. Cada arquivo representa uma ideia diferente — de jogos a ferramentas de análise.</p>
@@ -14,7 +14,7 @@
 
 ---
 
-## 📁 Projetos
+## Projetos
 
 ---
 
@@ -41,7 +41,6 @@ Exemplo: As Kh (Ás de espadas + Rei de copas)
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/b863c612-c970-4cad-a48c-dbae26b2fbf1" alt="Advisor de Poker" width="300"/>
-
 </div>
 
 ---
@@ -75,7 +74,7 @@ Multiplicado por R$100, é igual á: $ 573.00
 ````
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/f10beb33-1e25-4dbb-b1c4-fefc1ab1c0e7" alt="Conversor de Moedas" width="300"/>
+  <img width="300" height="225" alt="image" src="https://github.com/user-attachments/assets/70afc4b0-c490-4586-8fd3-fb893b02c07c" alt="Conversor de Moedas" />
 </div>
 
 ---
@@ -102,14 +101,43 @@ Um jogo de terminal onde o computador sorteia um número aleatório e o jogador 
 
 **Tecnologias:** `random`, `os`, `sys`
 
-
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/e9acd6ae-4f22-4b68-9e5c-5e2e8fc2648e" alt="Demo do Jogo de Adivinhação" width="300"/>
+  <img width="300" height="230" alt="image" src="https://github.com/user-attachments/assets/b25df2a0-0f85-41f5-b359-0721c0085e4b" alt="Rolador de Dados"/>
 </div>
 
 ---
 
-## 🚀 Como executar os projetos
+### 🎲 4. Rolador de Dados — `rolador_de_dados.py`
+
+> **Simulador de dados para RPG e jogos de mesa no terminal**
+
+Um rolador de dados completo para uso em jogos de RPG e de mesa. O usuário escolhe entre os tipos de dados mais comuns do universo de jogos (d4, d6, d8, d10, d12, d20 e d100) ou define um dado personalizado com qualquer número de faces, e o programa realiza a rolagem e exibe o resultado.
+
+**Tipos de dados suportados:**
+| #  | Dado  | Faces   |
+|----|-------|---------|
+| 1  | d4    | 4       |
+| 2  | d6    | 6       |
+| 3  | d8    | 8       |
+| 4  | d10   | 10      |
+| 5  | d12   | 12      |
+| 6  | d20   | 20      |
+| 7  | d100  | 100     |
+| 8  | Personalizado | Você define |
+
+**Como funciona:**
+- O usuário seleciona o tipo de dado pelo menu interativo no terminal.
+- O resultado é gerado com `random.randint()` de acordo com o número de faces do dado escolhido.
+- Na opção personalizada, o jogador digita o número de faces desejado e o programa realiza a rolagem.
+
+**Tecnologias:** `random`, `os`
+
+<div align="center">
+  <img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/e7be66dd-7034-4df3-9e7b-18b84e3f4aa7" alt="Rolador de Dados" />
+</div>
+---
+
+##Como executar os projetos
 
 **Pré-requisitos:** Python 3.14 instalado.
 
@@ -128,11 +156,12 @@ pip install texasholdem
 python analise_jogos_poker.py
 python conversor_de_moedas.py
 python jogo_de_advinhação.py
+python rolador_de_dados.py
 ```
 
 ---
 
-## 🛠️ Tecnologias utilizadas
+## Tecnologias utilizadas
 
 <p>
   <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
@@ -144,7 +173,7 @@ python jogo_de_advinhação.py
 
 ---
 
-## 👤 Autor
+## Autor
 
 **Eduardo Nicolete**
 
