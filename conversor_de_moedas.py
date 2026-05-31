@@ -5,13 +5,25 @@ os.system('cls')
 puller = ""
 
 
-print("|---------Conversor de Moedas----------|")
-print("| De qual moeda você deseja converter? |")
-print("| 1 - Real(R$)                         |")
-print("| 2 - Dolár($)                         |")
-print("| 3 - Euro(€)                          |")
-print("| 4 - Libra(£)                         |")
-in_money = int(input("| Escolha: "))
+print("╔═════════════════════════════════════════╗")
+print("║           Conversor de Moedas           ║")
+print("╠═════════════════════════════════════════╣")
+print("║                                         ║")
+print("║ De qual moeda você deseja converter?    ║")
+print("║ 1 - Real(R$)                            ║")
+print("║ 2 - Dolár($)                            ║")
+print("║ 3 - Euro(€)                             ║")
+print("║ 4 - Libra(£)                            ║")
+print("║                                         ║")
+print("╚═════════════════════════════════════════╝")
+print()
+while True:
+    try:
+        in_money = int(input("Escolha: "))
+        break
+    except ValueError:
+        os.system('cls')
+        print("Opção inválida, tente novamente")
 
 os.system('cls')
 if  in_money == 1:
@@ -35,12 +47,25 @@ else:
     sys.exit()
     
 
-print("| Para qual moeda você deseja converter? |")
-print("| 1 - Real(R$)                           |")
-print("| 2 - Dolár($)                           |")
-print("| 3 - Euro(€)                            |")
-print("| 4 - Libra(£)                           |")
-out_money = int(input("| Escolha: "))
+print("╔═════════════════════════════════════════╗")
+print("║           Conversor de Moedas           ║")
+print("╠═════════════════════════════════════════╣")
+print("║                                         ║")
+print("║ Para qual moeda você deseja converter?  ║")
+print("║ 1 - Real(R$)                            ║")
+print("║ 2 - Dolár($)                            ║")
+print("║ 3 - Euro(€)                             ║")
+print("║ 4 - Libra(£)                            ║")
+print("║                                         ║")
+print("╚═════════════════════════════════════════╝")
+print()
+while True:
+    try:
+        out_money = int(input("Escolha: "))
+        break
+    except ValueError:
+        os.system('cls')
+        print("Opção inválida, tente novamente")
 
 os.system('cls')
 if  out_money == 1:
