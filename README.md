@@ -29,7 +29,7 @@ Um advisor completo de poker rodando no terminal. Você informa as suas cartas n
 <div align="center">
   <img src="https://github.com/user-attachments/assets/b863c612-c970-4cad-a48c-dbae26b2fbf1" alt="Advisor de Poker" width="300"/>
   <br><br>
-  <a href="https://github.com/Eduardo-Nicolete37/analise_jogos_poker">
+  <a href="https://github.com/Eduardo-Nicolete37/Poker_Advisor/tree/main">
     <img src="https://img.shields.io/badge/Ver%20Repositório-181717?style=for-the-badge&logo=github&logoColor=white" alt="Ver Repositório"/>
   </a>
 </div>
@@ -47,7 +47,7 @@ Um conversor de moedas que busca a cotação atual diretamente da internet e rea
 <div align="center">
   <img width="300" height="225" src="https://github.com/user-attachments/assets/70afc4b0-c490-4586-8fd3-fb893b02c07c" alt="Conversor de Moedas"/>
   <br><br>
-  <a href="https://github.com/Eduardo-Nicolete37/conversor_de_moedas">
+  <a href="https://github.com/Eduardo-Nicolete37/CAMBIO_MOEDAS">
     <img src="https://img.shields.io/badge/Ver%20Repositório-181717?style=for-the-badge&logo=github&logoColor=white" alt="Ver Repositório"/>
   </a>
 </div>
